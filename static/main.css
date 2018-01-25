@@ -1,0 +1,334 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
+body {
+	font-family: "Open Sans", Helvetica;
+	font-size: 1em;
+}
+
+#container {
+	position: relative;
+	width: 900px;
+	margin: 0 auto;
+}
+
+#container>* {
+	position: relative;
+}
+
+div#header {
+	height: 220px;
+	padding: 20px;
+	border-bottom: 1px solid grey;
+}
+
+div#logo-text {
+	position: relative;
+	margin-top: 40px;
+}
+
+.logo-font {
+	font-size: 100px;
+	letter-spacing: 5px;
+}
+
+.logo-footer {
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+.logo-img {
+	float: left;
+	margin: 10px;
+}
+
+#header-float {
+	position: fixed;
+	top: -151px;
+	width: inherit;
+	z-index: 5;
+	background-color: white;
+	border-bottom: 1px solid grey;
+	transition: top 100ms ease-out;
+}
+
+.donate-button {
+	position: absolute;
+	right: 20px;
+	top: 90px;
+	padding: 10px;
+	font-size: 40px;
+	text-decoration: none;
+	color: #ff6666;
+	background-color: white;
+	border: 2px solid #ff6666;
+	transition: ease-out 100ms;
+	border-radius: 10px;
+}
+
+.donate-button:hover {
+	background-color: #ff6666;
+	color: white;
+}
+
+#header-float>.donate-button {
+	top: 30px;
+}
+
+div#gallery {
+	height: 500px;
+	margin: 50px 10px;
+	overflow: hidden;
+	background: black;
+}
+
+div#img-container {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 10000px;
+	transition: 700ms ease-in-out;
+}
+
+.gallery-img {
+	height: 100%;
+	margin-right: -5px;
+}
+
+.swipebutton {
+	position: absolute;
+	width: 100px;
+	height: 100%;
+	z-index: 2;
+	top: 0px;
+	background: url("../img/arrow.png") no-repeat right;
+	opacity: .6;
+	transition: linear 100ms;
+}
+
+.swipebutton:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.swipebutton#swipe-left:active {
+	background-position: 0 49%;
+}
+
+.swipebutton#swipe-right:active {
+	background-position: 0 51%;
+}
+
+#swipe-left {
+	left: 0px;
+	transform: rotate(180deg);
+}
+
+#swipe-right {
+	right: 0px;
+}
+
+#pos-bar {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+}
+
+#pos-bar>span.dot {
+	color: white;
+	opacity: .6;
+	font-size: 50px;
+	transition: linear 100ms;
+	cursor: pointer;
+}
+
+#pos-bar>span.dot.selected {
+	opacity: 1;
+}
+
+
+div.article {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+div.article:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+span.title {
+	display: block;
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 50px;
+}
+
+span.sub-title {
+	display: block;
+	font-size: 30px;
+}
+
+p.article-text {
+	text-align: justify;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+
+ul.itemize {
+	padding: 5px 1em;
+	list-style-type: decimal;
+	/*list-style-image: TODO*/ 
+	font-size: 20px;
+}
+
+ul.itemize>li {
+	margin: 10px 1em;
+}
+
+a.more-button {
+	float: right;
+	color: #1a8cff;
+	font-size: 25px;
+	transition: 150ms ease-out;
+}
+
+a.more-button:hover {
+	color: #1a8cff;
+	background-color: white;
+	cursor: pointer;
+}
+
+#sponsor-logos {
+	padding: 10px;
+}
+
+ul.logo-table {
+	text-align: justify;
+	padding: 10px;
+	margin: 10px 0;
+	height: 100px;
+}
+
+ul.logo-table:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+ul.logo-table:before {
+    content: '';
+    display: block;
+}
+
+li.logo-table {
+	position: relative;
+	width: 30%;
+	height: 100%;
+	display: inline-block;	
+}
+
+a.logo-tile {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #d6d6d6 url("../img/unicef_light.png") no-repeat center;
+	transition: 50ms linear;
+}
+
+a.logo-tile:hover {
+	background-color: white;
+	background-image: url("../img/unicef.png");
+}
+
+[class*="zocial-"]:before {
+	font-family: "zocial", sans-serif;
+}
+
+div#social-bar {
+	position: absolute;
+	left: 100%;
+	transform: translateX(20px);
+	top: 300px;
+	padding: 10px;
+}
+
+a.social-icon, #instgrm-bg {  /* TODO alt img */
+	position: relative;
+	width: 60px;
+	height: 60px;
+	display: block;
+	margin: 10px auto;
+	border-radius: 50%;
+	color: white;
+	text-decoration: none;
+	font-size: 2em;
+  	line-height: 1.76em;
+  	text-align: center;
+  	transition: 200ms linear;
+}
+
+.social-icon.facebook {background-color: #3b5998;}
+.social-icon.tumblr {background-color: #36465d;}
+.social-icon.twitter {background-color: #1da1f2;}
+.social-icon.gmail {background-color: #dd5347;}
+.social-icon.instagram {background: url("../img/instagram_bg.jpg") center; background-size: cover; }
+.zocial-facebook { margin-left: -7pt; }
+
+.social-icon:hover {background-color: white;}
+.social-icon.facebook:hover {color: #3b5998;}
+.social-icon.tumblr:hover {color: #36465d;}
+.social-icon.twitter:hover {color: #1da1f2;}
+.social-icon.gmail:hover {color: #dd5347;}
+.social-icon.instagram:hover {color: #e54a5a ; background: white;}
+
+
+footer {
+	margin: 60px 100px 0 100px;
+	padding: 10px 0 10px;
+	color: grey;
+	border-top: 1px solid grey;
+	font-size: 15px;
+	text-align: center;
+}
+
+@media only screen and ( max-device-width: 1200px ){
+    div#container {
+        left: 0px;
+    }
+    div#social-bar {
+    	position: relative;
+    	top: 0px;
+    	left: 0px;
+    	margin: 50px 0px;
+    	transform: none;
+		text-align: center;
+	}
+	a.social-icon, #instgrm-bg {
+		display: inline-block;
+		margin: 0px 20px; 
+		width: 90px;
+		height: 90px;
+		font-size: 3em;
+		line-height: 1.8em;
+	}
+	}
+
+@media only screen and ( max-device-width: 500px ){
+	p.article-text {
+		font-size: 10px;
+	}
+	a.more-button {
+		font-size: 40px;
+	}
+	a.social-icon, #instgrm-bg {
+		width: 120px;
+		height: 120px;
+		font-size: 4em;
+		line-height: 1.8em;
+	}
+	footer {font-size: 10px}
+}
